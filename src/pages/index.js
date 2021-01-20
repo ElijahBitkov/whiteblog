@@ -19,7 +19,6 @@ const IndexPage = () => {
           frontmatter {
             date
             title
-            slug
           }
           excerpt(pruneLength: 100)
         }
@@ -52,7 +51,7 @@ const IndexPage = () => {
         <PostFace
           title = {e.node.frontmatter.title}
           date = {dateTranslate(e.node.frontmatter.date)}
-          slug = {e.node.frontmatter.slug}
+          slug = {e.node.frontmatter.date}
           datetime = {e.node.frontmatter.date}
         >
           {e.node.excerpt}
