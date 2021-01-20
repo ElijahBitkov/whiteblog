@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: ElijahBitkov/whiteblog
-  branch: netify
+  branch: main
   
 media_folder: /src/posts/
 public_folder: markdown-pages
