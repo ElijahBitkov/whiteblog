@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import PostFace from "../components/post-face"
 import {useStaticQuery, graphql} from "gatsby"
 import dateTranslate from "../components/date-translate"
-
+import SEO from "../components/seo"
 
 
 const IndexPage = () => { 
@@ -37,6 +37,7 @@ const IndexPage = () => {
 
     return (
     <Layout>
+      <SEO title= "Главная"/>
       <div className='facedash'>
       {data.allMarkdownRemark.edges.slice(0, count).map((e) => (
         <PostFace

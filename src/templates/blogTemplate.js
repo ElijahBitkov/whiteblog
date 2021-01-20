@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Date__section from "../components/section/date"
 import Title__section from "../components/section/title"
 import dateTranslate from "../components/date-translate"
+import SEO from "../components/seo"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -13,6 +14,7 @@ export default function Template({
   return (
     
     <Layout>
+        <SEO title= {frontmatter.title}/>
     <div className = "post">
     <Title__section style = {{textAlign: "center"}}>{frontmatter.title}</Title__section>
     
