@@ -85,7 +85,7 @@ const Globalstyle = createGlobalStyle `
         padding: .5rem 0;
     }
     .post {
-        width: min(680px, 96%);
+        width: min(920px, 96%);
         margin: 0 auto;
         display: grid;
         min-height: 100%;
