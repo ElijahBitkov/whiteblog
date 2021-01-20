@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import AnotherSection from "../components/another-section"
 import Date__section from "../components/section/date"
 import Title__section from "../components/section/title"
 import dateTranslate from "../components/date-translate"

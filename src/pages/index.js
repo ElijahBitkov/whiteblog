@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import AnotherSection from "../components/another-section"
 import Layout from "../components/layout"
 import PostFace from "../components/post-face"
 import {useStaticQuery, graphql} from "gatsby"

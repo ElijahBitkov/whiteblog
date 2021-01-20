@@ -22,7 +22,7 @@ const PostFace = ({title, date, slug, children, datetime}) => (
         <AnotherSection title = {title}  style = {{gridArea: "sect"}}>
             {children}
         </AnotherSection>
-        <Date__section datetime = {datetime}>{date}</Date__section>
+        <Date__section style = {{gridRow: "2/3", gridColumn: '1/4'}} datetime = {datetime}>{date}</Date__section>
         <Link className = "not-work0000 row-center" to = {slug}></Link>
     </Article>
 )
