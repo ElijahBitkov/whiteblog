@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: ElijahBitkov/whiteblog
+  branch: netify
+  
+media_folder: /src/posts/
+public_folder: markdown-pages
+
+  
+collections:
+  - name: blog
+    label: Blog
+    folder: "src/markdown-pages/"
+    media_folder: "."
+    slug: "{{year}}-{{month}}-{{day}} {{hour}}:{{minute}}"
+    create: true
+    fields:
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+ 
+      
