@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 const Date__section = styled.time `
-    font-size: .6em;
+    font-size: max(.6em, 12px);
     align-self: center;
     text-align: end;
 `

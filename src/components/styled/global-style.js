@@ -4,7 +4,7 @@ const Globalstyle = createGlobalStyle `
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
     html {
-        font-size: min(32px, 4vw);
+        font-size: min(32px, max(16px, 4vw));
     }
     body {
         font-family: 'IBM Plex Sans', sans-serif;
@@ -99,10 +99,10 @@ const Globalstyle = createGlobalStyle `
         grid-area: foot;
     }
     p {
-        font-size: .6em;
-        padding: 1.2em 0;
-        text-indent: 1.2em;
-        line-height: 1.2em;
+        font-size: .8em;
+        padding: 1.6em 0;
+        text-indent: 1.6em;
+        line-height: 1.6em;
     }
     
 `
