@@ -10,7 +10,7 @@ public_folder: posts
 collections:
   - name: blog
     label: Blog
-    folder: "src/markdown-pages/"
+    folder: "src/posts/"
     media_folder: "."
     slug: "{{year}}-{{month}}-{{day}} {{hour}}:{{minute}}"
     create: true
