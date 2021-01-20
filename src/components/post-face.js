@@ -23,7 +23,7 @@ const PostFace = ({title, date, slug, children, datetime}) => (
             {children}
         </AnotherSection>
         <Date__section datetime = {datetime}>{date}</Date__section>
-        <Link className = "not-work0000 row-center" to = {slug}>Читать</Link>
+        <Link className = "not-work0000 row-center" to = {slug}></Link>
     </Article>
 )
 

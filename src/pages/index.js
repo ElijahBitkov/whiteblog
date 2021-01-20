@@ -9,7 +9,7 @@ import dateTranslate from "../components/date-translate"
 
 const IndexPage = () => { 
 
-  const [count, setCount] =  useState(3)
+  const [count, setCount] =  useState(6)
 
   const data =  useStaticQuery(graphql`
   query  {
@@ -37,16 +37,8 @@ const IndexPage = () => {
   }
 
     return (
-    <Layout 
-      sideContent = {
-        <>
-          <AnotherSection title = "Здесь уже все умерло" className='db dc'>
-            Печально
-          </AnotherSection>
-        </>
-      }
-    >
-      <div className='column'>
+    <Layout>
+      <div className='facedash'>
       {data.allMarkdownRemark.edges.slice(0, count).map((e) => (
         <PostFace
           title = {e.node.frontmatter.title}
@@ -58,7 +50,7 @@ const IndexPage = () => {
         </PostFace>
       ))}
       </div>
-      <button className = "next mt-d5rem" onClick={() => limiter(count, qposts)}>Далее</button>
+      <button className = "next mt-d5rem" onClick={() => limiter(count, qposts)}>ещё</button>
     </Layout>
     )
 }

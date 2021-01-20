@@ -10,12 +10,11 @@ const Globalstyle = createGlobalStyle `
         font-family: 'IBM Plex Sans', sans-serif;
     }
     .wrapper {
-        width: min(1000px, 96%);
+        width: min(1280px, 96%);
         min-height: 100vh;
         margin: 0 auto;
         display: grid;
-        grid-template-areas: "head head" "main side" "foot foot";
-        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "head" "main" "foot";
         grid-template-rows: max-content auto max-content;
     }
 
@@ -38,8 +37,8 @@ const Globalstyle = createGlobalStyle `
         color: inherit;
         font-size: .8em;
         text-decoration: none;
-        align-self: center;
-        justify-self: center;
+        grid-row: 1/3;
+        grid-column: 1/4;
     }
     
     .db {
@@ -49,6 +48,7 @@ const Globalstyle = createGlobalStyle `
     
     .title__header {
         font-size: 1rem;
+        text-transform: uppercase;
     }
 
     .another-section {
@@ -59,9 +59,9 @@ const Globalstyle = createGlobalStyle `
         font-weight: 600;
         font-size: .6
     }
-    .column {
+    .facedash {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: .5rem;
         grid-auto-rows: minmax(8rem, max-content);
     }
@@ -75,10 +75,19 @@ const Globalstyle = createGlobalStyle `
         align-self: start;
         width: 100%;
         cursor: pointer;
+        background-color: grey;
+        padding: .5rem 0;
+    }
+    .post {
+        width: min(680px, 96%);
+        margin: 0 auto;
+        display: grid;
+        min-height: 100%;
+        grid-template-rows: max-content auto max-content;
     }
     .footer {
         background-color: black;
-        color: white
+        color: white;
     }
     .footer__wrapper {
         grid-area: foot;

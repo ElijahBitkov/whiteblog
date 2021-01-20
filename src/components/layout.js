@@ -24,9 +24,6 @@ export default function Layout({children, sideContent, onclick}) {
                 <header className = "dc header__wrapper header">
                     <h1 className = "title__header">{data.site.siteMetadata.title}</h1>
                 </header>
-                <aside className = "sidebar__wrapper column dc">
-                    {sideContent}
-                </aside>
                 <main className = "main__wrapper dc">
                     
                         {children}
