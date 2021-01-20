@@ -64,6 +64,12 @@ const Globalstyle = createGlobalStyle `
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: .5rem;
         grid-auto-rows: minmax(8rem, max-content);
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
     }
     .mt-d5rem {
         margin-top: .5rem;
@@ -75,7 +81,7 @@ const Globalstyle = createGlobalStyle `
         align-self: start;
         width: 100%;
         cursor: pointer;
-        background-color: grey;
+        background-color: rgb(150, 150, 255);
         padding: .5rem 0;
     }
     .post {
