@@ -17,12 +17,12 @@ const Article = styled.article`
 
 
 
-const PostFace = ({title, date, slug, children}) => (
+const PostFace = ({title, date, slug, children, datetime}) => (
     <Article className = "db dc">
         <AnotherSection title = {title}  style = {{gridArea: "sect"}}>
             {children}
         </AnotherSection>
-        <Date__section>{date}</Date__section>
+        <Date__section datetime = {datetime}>{date}</Date__section>
         <Link className = "not-work0000 row-center" to = {slug}>Читать</Link>
     </Article>
 )

@@ -3,7 +3,7 @@ import AnotherSection from "../components/another-section"
 import Layout from "../components/layout"
 import PostFace from "../components/post-face"
 import {useStaticQuery, graphql} from "gatsby"
-
+import dateTranslate from "../components/date-translate"
 
 
 
@@ -17,7 +17,7 @@ const IndexPage = () => {
       edges {
         node {
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date
             title
             slug
           }
@@ -51,8 +51,9 @@ const IndexPage = () => {
       {data.allMarkdownRemark.edges.slice(0, count).map((e) => (
         <PostFace
           title = {e.node.frontmatter.title}
-          date = {e.node.frontmatter.date}
+          date = {dateTranslate(e.node.frontmatter.date)}
           slug = {e.node.frontmatter.slug}
+          datetime = {e.node.frontmatter.date}
         >
           {e.node.excerpt}
         </PostFace>

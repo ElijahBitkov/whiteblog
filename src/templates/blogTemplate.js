@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import AnotherSection from "../components/another-section"
 import Date__section from "../components/section/date"
 import Title__section from "../components/section/title"
-
+import dateTranslate from "../components/date-translate"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -28,7 +28,7 @@ export default function Template({
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-    <Date__section>{frontmatter.date}</Date__section>
+    <Date__section datetime = {frontmatter.date}>{dateTranslate(frontmatter.date)}</Date__section>
   </Layout>
   )
 }
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         slug
         title
       }
