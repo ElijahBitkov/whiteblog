@@ -3,6 +3,8 @@ backend:
   repo: ElijahBitkov/whiteblog
   branch: main
   
+media_folder: /src/posts/
+public_folder: posts
 
   
 collections:
