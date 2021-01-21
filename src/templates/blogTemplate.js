@@ -23,7 +23,7 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: html }}
         />
     
-    <Date__section style = {{textAlign: "right"}} datetime = {frontmatter.date}>{dateTranslate(frontmatter.date)}</Date__section>
+    <Date__section style = {{textAlign: "right"}} datetime = {frontmatter.date}>{frontmatter.date}</Date__section>
     </div>
   </Layout>
   )
