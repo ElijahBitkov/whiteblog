@@ -2,7 +2,6 @@ import React, {useState} from "react"
 import Layout from "../components/layout"
 import PostFace from "../components/post-face"
 import {useStaticQuery, graphql} from "gatsby"
-import dateTranslate from "../components/date-translate"
 import SEO from "../components/seo"
 
 
@@ -42,7 +41,7 @@ const IndexPage = () => {
       {data.allMarkdownRemark.edges.slice(0, count).map((e) => (
         <PostFace
           title = {e.node.frontmatter.title}
-          date = {dateTranslate(e.node.frontmatter.date)}
+          date = {e.node.frontmatter.date}
           slug = {e.node.frontmatter.date}
           datetime = {e.node.frontmatter.date}
         >

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Date__section from "../components/section/date"
 import Title__section from "../components/section/title"
-import dateTranslate from "../components/date-translate"
+
 import SEO from "../components/seo"
 
 export default function Template({
